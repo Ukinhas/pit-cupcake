@@ -3,60 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cupcake Delícia - Início</title>
+    <title>Finalizar Pedido - Cupcake Delícia</title>
     <link rel="stylesheet" href="style.css">
+    
+    <script src="app.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">Cupcake Delícia</div>
             <ul>
-                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="index.html">Início</a></li>
                 <li><a href="cardapio.html">Cardápio</a></li>
                 <li><a href="contato.html">Contato</a></li>
+                <li><a href="checkout.html" class="active cart-btn">🛒 Carrinho</a></li> 
                 <li><a href="login.html" class="login-btn">Entrar</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>O sabor que transforma o seu dia</h1>
-            <p>Os melhores cupcakes artesanais da cidade, feitos com ingredientes frescos e muito carinho.</p>
-            <a href="cardapio.html" class="cta-button">Ver Cardápio Completo</a>
-        </section>
+        <section class="checkout-page">
+            <h2>Finalizar Pedido</h2>
+            <div class="checkout-container">
+                
+                <div class="customer-details">
+                    <h3>1. Seus Dados e Endereço</h3>
+                    <form action="#" method="POST" class="checkout-form">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone (WhatsApp)</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-8888" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" id="endereco" name="endereco" placeholder="Rua, Número e Bairro" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="complemento">Complemento</label>
+                            <input type="text" id="complemento" name="complemento" placeholder="Apto / Casa / Referência">
+                        </div>
+                    </form>
+                    
+                    <h3>2. Forma de Pagamento</h3>
+                    <form action="#" class="payment-options">
+                        <div class="payment-method">
+                            <input type="radio" id="pix" name="pagamento" value="pix" checked>
+                            <label for="pix">PIX</label>
+                        </div>
+                        <div class="payment-method">
+                            <input type="radio" id="cartao" name="pagamento" value="cartao">
+                            <label for="cartao">Cartão de Crédito (na entrega)</label>
+                        </div>
+                        <div class="payment-method">
+                            <input type="radio" id="dinheiro" name="pagamento" value="dinheiro">
+                            <label for="dinheiro">Dinheiro (na entrega)</label>
+                        </div>
+                    </form>
+                </div>
 
-        <section class="featured-flavors">
-            <h2>Nossos Sabores Mais Pedidos</h2>
-            <div class="flavors-grid">
-                <div class="flavor-card">
-                    <img src="https://via.placeholder.com/300x200" alt="Cupcake de Brownie">
-                    <h3>Brownie</h3>
-                    <p>Massa de chocolate intensa com pedaços de brownie e cobertura de doce de leite.</p>
-                </div>
-                <div class="flavor-card">
-                    <img src="https://via.placeholder.com/300x200" alt="Cupcake de Nutella">
-                    <h3>Nutella</h3>
-                    <p>Massa de baunilha fofinha com um recheio generoso de Nutella e topo de avelãs.</p>
-                </div>
-                <div class="flavor-card">
-                    <img src="https://via.placeholder.com/300x200" alt="Cupcake Tradicional">
-                    <h3>Tradicional</h3>
-                    <p>O clássico bolo de baunilha com cobertura de brigadeiro e granulado colorido.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="how-to-order">
-            <h2>Como Funciona?</h2>
-            <div class="steps">
-                <div class="step">
-                    <h3>1. Receba em Casa</h3>
-                    <p>Escolha seus sabores favoritos no nosso cardápio online e receba no conforto da sua casa.</p>
-                </div>
-                <div class="step">
-                    <h3>2. Retire na Loja</h3>
-                    <p>Faça seu pedido pelo site e agende um horário para retirar diretamente em nossa loja.</p>
+                <div class="order-summary">
+                    <h3>Resumo do Pedido</h3>
+                    
+                    <div class="summary-item">
+                        <span class="item-name">Cupcake de Brownie (1)</span>
+                        <span class="item-price">R$ 8,50</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="item-name">Cupcake de Nutella (2)</span>
+                        <span class="item-price">R$ 18,00</span>
+                    </div>
+                    
+                    <hr class="summary-divider">
+                    
+                    <div class="summary-total">
+                        <span class="total-label">Subtotal</span>
+                        <span class="total-price">R$ 26,50</span>
+                    </div>
+                    <div class="summary-total">
+                        <span class="total-label">Taxa de Entrega</span>
+                        <span class="total-price">R$ 5,00</span>
+                    </div>
+                    
+                    <hr class="summary-divider">
+                    
+                    <div class="summary-final-total">
+                        <span class="total-label">Total</span>
+                        <span class="total-price">R$ 31,50</span>
+                    </div>
+                    
+                    <button class="cta-button" style="width:100%; margin-top: 1.5rem;" onclick="confirmarPedido()">Confirmar Pedido</button>
                 </div>
             </div>
         </section>

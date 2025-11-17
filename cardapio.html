@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosso Cardápio - Cupcake Delícia</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script> 
 </head>
 <body>
     <header>
@@ -14,6 +15,7 @@
                 <li><a href="index.html">Início</a></li>
                 <li><a href="cardapio.html" class="active">Cardápio</a></li>
                 <li><a href="contato.html">Contato</a></li>
+                <li><a href="checkout.html" class="cart-btn">🛒 Carrinho</a></li>
                 <li><a href="login.html" class="login-btn">Entrar</a></li>
             </ul>
         </nav>
@@ -25,12 +27,13 @@
             <p>Escolha seus favoritos e faça seu pedido!</p>
 
             <div class="menu-grid">
+                
                 <div class="menu-item-card">
                     <img src="images/brownie.jpg" alt="Cupcake de Brownie">
                     <h3>Brownie</h3>
                     <p>Massa de chocolate com pedaços de brownie e cobertura de doce de leite.</p>
                     <span class="price">R$ 8,50</span>
-                    <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                    <button class="add-to-cart-btn" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
                 </div>
 
                 <div class="menu-item-card">
@@ -38,7 +41,7 @@
                     <h3>Nutella</h3>
                     <p>Massa de baunilha fofinha com um recheio generoso de Nutella e topo de avelãs.</p>
                     <span class="price">R$ 9,00</span>
-                    <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                    <button class="add-to-cart-btn" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
                 </div>
 
                 <div class="menu-item-card">
@@ -46,7 +49,7 @@
                     <h3>Tradicional</h3>
                     <p>O clássico bolo de baunilha com cobertura de brigadeiro e granulado colorido.</p>
                     <span class="price">R$ 7,00</span>
-                    <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                    <button class="add-to-cart-btn" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
                 </div>
 
                 <div class="menu-item-card">
@@ -54,7 +57,7 @@
                     <h3>Red Velvet</h3>
                     <p>Massa aveludada vermelha com um recheio suave de cream cheese.</p>
                     <span class="price">R$ 8,50</span>
-                    <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                    <button class="add-to-cart-btn" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
                 </div>
                 
                 <div class="menu-item-card">
@@ -62,7 +65,7 @@
                     <h3>Limão Siciliano</h3>
                     <p>Massa leve de limão com recheio de mousse e cobertura de merengue.</p>
                     <span class="price">R$ 8,00</span>
-                    <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                    <button class="add-to-cart-btn" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
                 </div>
                 
                 <div class="menu-item-card">
@@ -70,7 +73,7 @@
                     <h3>Cenoura com Chocolate</h3>
                     <p>Bolo de cenoura fofinho com cobertura de brigadeiro cremoso.</p>
                     <span class="price">R$ 7,50</span>
-                    <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                    <button class="add-to-cart-btn" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
                 </div>
             </div>
         </section>

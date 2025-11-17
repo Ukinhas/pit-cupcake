@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF--8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entrar - Cupcake Delícia</title>
     <link rel="stylesheet" href="style.css">
+    
+    <script src="app.js" defer></script>
 </head>
 <body>
     <header>
@@ -14,6 +16,7 @@
                 <li><a href="index.html">Início</a></li>
                 <li><a href="cardapio.html">Cardápio</a></li>
                 <li><a href="contato.html">Contato</a></li>
+                <li><a href="checkout.html" class="cart-btn">🛒 Carrinho</a></li>
                 <li><a href="login.html" class="active login-btn">Entrar</a></li>
             </ul>
         </nav>
@@ -32,10 +35,10 @@
                         <label for="senha">Senha</label>
                         <input type="password" id="senha" name="senha" placeholder="Sua senha" required>
                     </div>
-                    <button type-="submit" class="cta-button">Entrar</button>
+                    <button type="submit" class="cta-button" onclick="fazerLogin()">Entrar</button>
                 </form>
                 <p class="register-link">
-                    Ainda não tem conta? <a href="#">Cadastre-se</a>
+                    Ainda não tem conta? <a href="#" onclick="mostrarCadastro()">Cadastre-se</a>
                 </p>
             </div>
         </section>

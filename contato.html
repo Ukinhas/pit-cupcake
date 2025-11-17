@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fale Conosco - Cupcake Delícia</title>
     <link rel="stylesheet" href="style.css">
+    
+    <script src="app.js" defer></script>
 </head>
 <body>
     <header>
@@ -14,6 +16,7 @@
                 <li><a href="index.html">Início</a></li>
                 <li><a href="cardapio.html">Cardápio</a></li>
                 <li><a href="contato.html" class="active">Contato</a></li>
+                <li><a href="checkout.html" class="cart-btn">🛒 Carrinho</a></li>
                 <li><a href="login.html" class="login-btn">Entrar</a></li>
             </ul>
         </nav>
@@ -35,4 +38,34 @@
                         </div>
                         <div class="form-group">
                             <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua dúvida, sugestão ou elog
+                            <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua dúvida, sugestão ou elogio..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="cta-button" onclick="enviarMensagem()">Enviar Mensagem</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <h2>Nossas Informações</h2>
+                    <p>Ficaremos felizes em atender você!</p>
+                    
+                    <h3>Telefone</h3>
+                    <p>(11) 99999-8888</p>
+                    
+                    <h3>Endereço</h3>
+                    <p>Rua Antônio Alves, 123 - Centro<br>Salvador, BA</p>
+                    
+                    <h3>Horário de Funcionamento</h3>
+                    <p>Segunda a Sábado<br>Das 09:00 às 18:00</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Cupcake Delícia - Todos os direitos reservados.</p>
+        <p>Projeto Integrador Transdisciplinar II - Engenharia de Software</p>
+    </footer>
+
+</body>
+</html>
