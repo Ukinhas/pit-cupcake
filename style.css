@@ -1,0 +1,531 @@
+/* Importa a nova fonte 'Nunito' do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;800&display=swap');
+
+/* ============ GERAL ============ */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif; /* <-- FONTE MUDADA AQUI */
+    line-height: 1.6;
+}
+
+body {
+    background-color: #ffebee; /* <-- COR DE FUNDO ROSA AQUI */
+    color: #4a4a4a;
+}
+
+/* ============ HEADER E NAVEGAÇÃO ============ */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 800; /* Deixando o logo mais forte com a nova fonte */
+    color: #d9534f; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 700; /* Deixando o menu mais forte com a nova fonte */
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #d9534f;
+}
+
+nav a.login-btn {
+    background-color: #d9534f;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a.login-btn:hover {
+    background-color: #c9302c;
+}
+
+/* ============ PÁGINA INICIAL (HERO) ============ */
+.hero {
+    background-color: #fceeee; 
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    background-color: #d9534f;
+    color: #ffffff;
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #c9302c;
+}
+
+/* ============ PÁGINA INICIAL (SABORES) ============ */
+.featured-flavors {
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+.featured-flavors h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: 800;
+}
+
+.flavors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.flavor-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    overflow: hidden;
+    text-align: left;
+}
+
+.flavor-card img {
+    width: 100%;
+    height: 220px; /* <-- TAMANHO DA IMAGEM AJUSTADO AQUI (mude este valor se quiser) */
+    object-fit: cover;
+}
+
+.flavor-card h3 {
+    font-size: 1.3rem;
+    color: #d9534f;
+    margin: 1rem 1.5rem 0.5rem;
+    font-weight: 700;
+}
+
+.flavor-card p {
+    font-size: 0.95rem;
+    padding: 0 1.5rem 1.5rem;
+}
+
+/* ============ PÁGINA INICIAL (COMO PEDIR) ============ */
+.how-to-order {
+    background-color: #fff;
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+.how-to-order h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: 800;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.step {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    padding: 1.5rem;
+}
+
+.step h3 {
+    font-size: 1.3rem;
+    color: #d9534f;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+/* ============ RODAPÉ (TODAS AS PÁGINAS) ============ */
+footer {
+    text-align: center;
+    padding: 2rem 5%;
+    background-color: #f7f7f7;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 2rem; /* Adiciona um espaço antes do rodapé */
+}
+
+/* ============ PÁGINA CARDÁPIO ============ */
+.menu-page {
+    padding: 3rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.menu-page h2 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.menu-page p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2.5rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.menu-item-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item-card img {
+    width: 100%;
+    height: 220px; /* <-- TAMANHO DA IMAGEM AJUSTADO AQUI (mude este valor se quiser) */
+    object-fit: cover;
+}
+
+.menu-item-card h3 {
+    font-size: 1.3rem;
+    color: #d9534f;
+    margin: 1rem;
+    font-weight: 700;
+}
+
+.menu-item-card p {
+    font-size: 0.95rem;
+    padding: 0 1.5rem;
+    margin-bottom: 1rem;
+    flex-grow: 1; 
+}
+
+.menu-item-card .price {
+    font-size: 1.4rem;
+    font-weight: 800; /* Deixando o preço mais forte */
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart-btn {
+    background-color: #5cb85c; 
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    font-family: 'Nunito', sans-serif; /* Garante que o botão use a fonte nova */
+}
+
+.add-to-cart-btn:hover {
+    background-color: #4cae4c;
+}
+
+/* ============ PÁGINA LOGIN ============ */
+.login-page {
+    padding: 3rem 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh; 
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-container h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 800;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+    font-family: 'Nunito', sans-serif; /* Garante que o input use a fonte nova */
+}
+
+.login-container .cta-button {
+    width: 100%;
+    margin-top: 1rem;
+    border: none;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif; /* Garante que o botão use a fonte nova */
+}
+
+.register-link {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.register-link a {
+    color: #d9534f;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* ============ PÁGINA CONTATO ============ */
+.contact-page {
+    padding: 3rem 5%;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.contact-form {
+    flex: 2; 
+    min-width: 300px;
+}
+
+.contact-info {
+    flex: 1; 
+    min-width: 280px;
+    background-color: #fcfcfc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #f0f0f0;
+}
+
+.contact-form h2, .contact-info h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.contact-info h3 {
+    font-size: 1.1rem;
+    color: #d9534f;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+    font-family: 'Nunito', sans-serif; /* Garante que o textarea use a fonte nova */
+    resize: vertical; 
+}
+
+.contact-form .cta-button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif; /* Garante que o botão use a fonte nova */
+}
+
+/* ============ PÁGINA CHECKOUT ============ */
+.checkout-page {
+    padding: 3rem 5%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.checkout-page h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 800;
+}
+
+.checkout-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Coluna da Esquerda */
+.customer-details {
+    flex: 2;
+    min-width: 320px;
+}
+
+.customer-details h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+    font-weight: 700;
+}
+
+.checkout-form .form-group {
+    margin-bottom: 1.2rem;
+}
+
+/* Coluna da Direita */
+.order-summary {
+    flex: 1;
+    min-width: 300px;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    height: fit-content; 
+}
+
+.order-summary h3 {
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.summary-item, .summary-total, .summary-final-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.summary-item .item-name {
+    color: #555;
+}
+
+.summary-divider {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 1.5rem 0;
+}
+
+.summary-final-total .total-label {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #333;
+}
+.summary-final-total .total-price {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #d9534f;
+}
+
+/* Opções de Pagamento */
+.payment-options {
+    margin-top: 2rem;
+}
+.payment-method {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+    background-color: #fff; /* Fundo branco para as opções */
+}
+.payment-method:has(input:checked) { 
+    background-color: #fefaf8;
+    border-color: #d9534f;
+    box-shadow: 0 0 5px rgba(217, 83, 79, 0.3);
+}
+.payment-method input[type="radio"] {
+    margin-right: 1rem;
+    width: 18px;
+    height: 18px;
+}
+.payment-method label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+}
